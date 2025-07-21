@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Identity Toolkit</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f5f7fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .left,
+        .right {
+            padding: 20px;
+            flex: 1 1 300px;
+        }
+
+        .left h2 {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .color-palette {
+            margin-top: 10px;
+        }
+
+        .color-circle {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            border-radius: 50%;
+            margin-right: 6px;
+            border: 1px solid #999;
+            cursor: pointer;
+        }
+
+        .preview {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        .name {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .job-title {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .contact {
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .social {
+            margin-top: 10px;
+        }
+
+        .social a {
+            text-decoration: none;
+            margin-right: 10px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .export-buttons {
+            margin-top: 20px;
+        }
+
+        .export-buttons button {
+            padding: 10px 14px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #0078ff;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- LEFT FORM PANEL -->
+        <div class="left">
+            <h2>AI-Generated Email Signature Builder</h2>
+            <label>Name</label>
+            <input type="text" value="John Doe" />
+
+            <label>Job Title</label>
+            <input type="text" value="Marketing Manager" />
+
+            <label>Phone</label>
+            <input type="text" value="+1 234 567 8901" />
+
+            <label>Email</label>
+            <input type="email" value="john.doe@example.com" />
+
+            <label>Website</label>
+            <input type="url" value="www.example.com" />
+
+            <label>Brand Colors</label>
+            <div class="color-palette">
+                <span class="color-circle" style="background:#d8b28e;"></span>
+                <span class="color-circle" style="background:#8a6c4a;"></span>
+                <span class="color-circle" style="background:#5b4533;"></span>
+            </div>
+
+            <div class="export-buttons">
+                <button>Export HTML</button>
+                <button>Export PNG</button>
+                <button>Export PDF</button>
+            </div>
+        </div>
+
+        <!-- RIGHT PREVIEW PANEL -->
+        <div class="right">
+            <div class="preview">
+                <div class="name">John Doe</div>
+                <div class="job-title">Marketing Manager</div>
+                <div class="contact">
+                    +1 234 567 8901<br />
+                    john.doe@example.com<br />
+                    www.example.com
+                </div>
+                <div class="social">
+                    <a href="#">in Example</a>
+                    <a href="#">🐦 Company</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LinkedIn Headshot Enhancer Section -->
+    <div class="container">
+        <!-- LEFT PANEL -->
+        <div class="left">
+            <h2>LinkedIn Headshot Enhancer</h2>
+
+            <label>Upload Casual Selfie:</label>
+            <input type="file" accept="image/*" />
+
+            <div class="presets">
+                <label style="display:block; margin-top:15px;">Choose Background Preset:</label>
+                <div class="preset-option">Corporate Office</div>
+                <div class="preset-option">Startup Studio</div>
+                <div class="preset-option">Natural Light</div>
+                <div class="preset-option">Neutral Background</div>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="right">
+            <div class="preview">
+                <img src="https://via.placeholder.com/200x200.png?text=Enhanced+Headshot" alt="Enhanced Headshot" />
+                <div class="caption">Preview: Corporate Office Background</div>
+            </div>
+
+            <div class="export-buttons">
+                <button>Export for LinkedIn</button>
+                <button>Export for Zoom</button>
+                <button>Export for CV</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Branded Social & Email Banners Section -->
+    <div class="container">
+        <!-- LEFT PANEL -->
+        <div class="left">
+            <h2>Branded Social & Email Banners</h2>
+
+            <label>Enter Business Name or Slogan:</label>
+            <input type="text" placeholder="e.g. BrightIdeas Marketing" />
+
+            <div class="presets" style="margin-top: 20px;">
+                <label style="display:block;">Select Banner Type:</label>
+                <div class="preset-option">LinkedIn Header</div>
+                <div class="preset-option">Newsletter Top</div>
+                <div class="preset-option">Event Banner</div>
+                <div class="preset-option">Virtual Conference Cover</div>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="right">
+            <div class="preview">
+                <img src="https://via.placeholder.com/500x150.png?text=Auto-Generated+Banner"
+                    alt="Generated Banner Preview" style="width:100%; border-radius: 8px;" />
+                <div class="caption">Preview: Newsletter Top Banner</div>
+            </div>
+
+            <div class="export-buttons">
+                <button>Export PNG</button>
+                <button>Export HTML</button>
+                <button>Add to Design</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Smart Export to Email Campaigns Section -->
+    <div class="container">
+        <!-- LEFT PANEL -->
+        <div class="left">
+            <h2>Smart Export to Email Campaigns</h2>
+
+            <label>Select a Design to Export:</label>
+            <input type="file" accept="image/*, .ai, .psd, .svg, .png" />
+
+            <div class="presets" style="margin-top: 20px;">
+                <label style="display:block;">Choose Export Preset:</label>
+                <div class="preset-option">Promotional Email</div>
+                <div class="preset-option">Newsletter Header</div>
+                <div class="preset-option">Event Invite</div>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="right">
+            <div class="preview">
+                <img src="https://via.placeholder.com/500x180.png?text=Email+Block+Preview" alt="Email Block Preview"
+                    style="width:100%; border-radius: 8px;" />
+                <div class="caption">Preview: Responsive Email Block</div>
+            </div>
+
+            <div class="export-buttons">
+                <button>Export as HTML</button>
+                <button>Export for Mailchimp</button>
+                <button>Copy HTML Code</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Design Guidance Section -->
+    <div class="container">
+        <!-- LEFT PANEL -->
+        <div class="left">
+            <h2>AI-Powered Design Guidance</h2>
+
+            <label>Upload a Design for Analysis:</label>
+            <input type="file" accept="image/*, .psd, .ai, .svg" />
+
+            <div style="margin-top: 20px;">
+                <label>Analysis Focus:</label>
+                <div class="preset-option">Color Contrast</div>
+                <div class="preset-option">Font Pairing</div>
+                <div class="preset-option">Element Alignment</div>
+                <div class="preset-option">Brand Consistency</div>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="right">
+            <div class="preview">
+                <img src="https://via.placeholder.com/500x300.png?text=Design+Analysis+Preview"
+                    alt="Design Guidance Preview" style="width:100%; border-radius: 8px;" />
+                <div class="caption">Suggestions:</div>
+                <ul style="text-align: left; font-size: 0.95em; line-height: 1.6; padding-left: 20px;">
+                    <li>🎨 Try matching this CTA button with your brand palette.</li>
+                    <li>🔠 This font pair improves readability for headings and body text.</li>
+                    <li>🧭 Align left sidebar elements for better visual flow.</li>
+                    <li>✅ High contrast text meets accessibility standards.</li>
+                </ul>
+            </div>
+
+            <div class="export-buttons">
+                <button>Apply Suggestions</button>
+                <button>Download Report</button>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
